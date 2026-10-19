@@ -1,0 +1,160 @@
+<?php
+session_start();
+
+if($_SESSION['type']=="")
+{
+	header("location:../login/login.php");
+}
+
+$title="";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style type="text/css">
+    <limk rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    *{
+        padding: 0;
+        margin: 0;
+     }
+     body{
+        background-image: url(images/computers.jpg);
+        background-size:cover;
+        background-position: center;
+        box-sizing: border-box;
+        font-family: sans-serif;
+     }
+     .menu-bar{
+        background:#fff;
+        text-align: center;
+
+     }
+     .menu-bar ul
+     {
+        display: inline-flex;
+        list-style: none;
+        color:black;
+    }
+    .menu-bar ul li
+    {
+        width: 120px;
+        margin: 15px;
+        padding; 15px;
+    }
+    .menu-bar ul li a
+    {
+      text-decoration: none;
+      color:#fff;
+    }
+    .active, .menu-bar ul li:hover
+    {
+        background: #2bab0d;
+        border-radius: 3px;
+    }
+    .menu-bar.fa
+    {
+        margin-right: 8px;
+    }
+    .sub-menu-1
+    {
+        display: none;
+    }
+    .menu-bar ul li:hover .sub-menu-1
+    {
+        display: block;
+        position: absolute;
+        background: rgb(0,100,0);
+        margin-top: 15px;
+        margin-left: -15px
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul
+    {
+       display: block;
+       margin: 10px;
+    }
+    .menu-bar ul li:hover .sub-menu-1 ul li
+    {
+        width: 150px;
+        padding: 10px;
+        border-bottom: 1px dotted #fff;
+        background: transparent;
+        border-radius:0;
+        text-align:left;
+    }
+   .menu-bar ul li:hover .sub-menu-1 ul li:last-child
+   {
+    border-bottom: none;
+   }
+   .menu-bar ul li:hover .sub-menu-1 ul li a:hover
+   {
+    color:#b2ff00;
+   }
+
+   </style>
+</head>
+<body>
+    <div class="menu-bar"></div>
+    <ul>
+        <li><a href=""></a><i class="fa-solid fa-house"></i>HOME</a></li>
+        <li><a href="../voter/select.php"><i class="fa-solid fa-users"></i>VOTERS</a></li>
+            <div class="sub-menu">
+             <ul>
+                <li><a href="../voter/form.php">ADD VOTER</a></li>
+                <li><a href-"../voter/select.php">VIEW ALL</a></li>
+             </ul>
+            </div>
+        <li> <a href="../candidate/select.php"><i class="fa-solid fa-users"></i>CANDIDATE</a></li>
+        <div class="sub-menu">
+            <ul>
+               <li><a href="../candidate/form.php">ADD CANDIDATE</a></li>
+               <li><a href="../candidate/select.php">VIEW ALL</a></li>
+            </ul>
+           </div>
+        <li><a href="../voting/select.php"><i class="fa-solid fa-file-check"></i>VOTES</a></li>
+        <div class="sub-menu">
+            <ul>
+              <li><a href="../voting">VIEW ALL</a></li>
+            </ul>
+           </div>
+
+        <li><a href="../news/select.php"></a><i class="fa-sharp fa-solid fa-newspaper"></i>NEWS</a></li>
+        <div class="sub-menu">
+            <ul>
+               <li><a href="">ADD NEWS</a></li>
+               <li><a href="">VIEW ALL</a></li>
+            </ul>
+           </div>
+        <li><i class="fa-solid fa-ballot-check"></i>VOTE RESULT</li>
+        <div class="sub-menu">
+            <ul>
+               <li><a href="">ADD CANDIDATE</a></li>
+               <li><a href="">LIST ALL CANDIDATE</a></li>
+            </ul>
+           </div>
+        <li><i class="fa-solid fa-file"></i>ELECTION STATUS</li>
+        <div class="sub-menu">
+            <ul>
+               <li><a href="">ADD CANDIDATE</a></li>
+               <li><a href="">LIST ALL CANDIDATE</a></li>
+            </ul>
+           </div>
+        <li><i class="fa-solid fa-users"></i>ADMIN SETTINGS</li>
+        <div class="sub-menu">
+            <ul>
+               <li><a href="">ADD CANDIDATE</a></li>
+               <li><a href="">LIST ALL CANDIDATE</a></li>
+            </ul>
+           </div>
+        <li><i class="fa-sharp fa-solid fa-shield-check"></i>CHANGE PASSWORD</li>
+        <div class="sub-menu">
+            <ul>
+               <li><a href="">ADD CANDIDATE</a></li>
+               <li><a href="">LIST ALL CANDIDATE</a></li>
+            </ul>
+           </div>
+    </ul>
+    </div>
+    </body>
