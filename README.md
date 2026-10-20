@@ -94,7 +94,6 @@ Through this project, I gained exposure to:
 - **Project:** College E-Voting System
 - **Type:** B.Tech Computer Science and Engineering Final-Year Project
 - **Domain:** Web Development & Cybersecurity
-- **Institution:** College of Engineering Chengannur
 
 ## 📄 Disclaimer
 
